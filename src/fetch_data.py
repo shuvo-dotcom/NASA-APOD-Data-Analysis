@@ -13,7 +13,7 @@ class problem1:
     def __init__(self):
         self.API_KEY = os.getenv("API_KEY")
         self.NASA_APOD_URL =os.getenv("NASA_APOD_URL")
-        self.JSON_FILE_NAME = os.getenv("JSON_FILE_NAME")
+        self.JSON_FILE_NAME = "src/static_files/"+os.getenv("JSON_FILE_NAME")
     def get_apod_data(self, date):
         response = requests.get(f'{self.NASA_APOD_URL}?api_key={self.API_KEY}&date={date}', auth=('user', 'pass'))
         formatted_response = (response.json())
@@ -31,7 +31,7 @@ class problem1:
         for _ in range((end_date-progressive_date).days):
             json_storer[str(progressive_date.date())] = self.get_apod_data(progressive_date.date())
             progressive_date += timedelta(days=1)
-            # time.sleep(1)
+            time.sleep(1)
             print(f"Data 📈 fetch completed for {progressive_date} ✅")
         with open(self.JSON_FILE_NAME, mode='w', encoding='utf-8') as feedsjson:
             entry = {str(datetime.now()): json_storer}
@@ -39,8 +39,8 @@ class problem1:
         return True
 class problem2:
     def __init__(self):
-        self.JSON_FILE_NAME = os.getenv("JSON_FILE_NAME")
-        self.CSV_FILE_NAME = os.getenv("CSV_FILE_NAME")
+        self.JSON_FILE_NAME = "src/static_files/"+os.getenv("JSON_FILE_NAME")
+        self.CSV_FILE_NAME = "src/static_files/"+os.getenv("CSV_FILE_NAME")
         with open(self.JSON_FILE_NAME, 'r') as file:
             self.json_file_content = json.load(file)
     def read_apod_data(self):
