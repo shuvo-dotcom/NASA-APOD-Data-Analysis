@@ -17,6 +17,13 @@ pip install requirements.txt
 cd NASA-APOD-Data-Analysis
 ```
 Note: Make sure to use virtual enviroments for this project
+Create a file named .env and place all the keys required in the file.
+```
+API_KEY=your_key
+NASA_APOD_URL=https://api.nasa.gov/planetary/apod
+JSON_FILE_NAME=apod_data.json
+CSV_FILE_NAME=apod_summary.csv
+```
 
 ## Author
 
