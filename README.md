@@ -10,8 +10,8 @@
 4. Analytically Observing the Iris dataset and its results over newly generated features using feature enginering.
 
 > Installation Command.
-pip install requirements.txt
-cd NASA-APOD-Data-Analysis
+>>pip install requirements.txt
+>>cd NASA-APOD-Data-Analysis
 Note: Make sure to use virtual enviroments for this project
 
 ## Author
