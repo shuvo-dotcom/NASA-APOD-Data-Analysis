@@ -9,9 +9,9 @@
 3. Creating Numpy 2d Array based on certain predefined conditions and then appyling filter technique to retrieve the final array.
 4. Analytically Observing the Iris dataset and its results over newly generated features using feature enginering.
 
-> Installation Command.
->>pip install requirements.txt
->>cd NASA-APOD-Data-Analysis
+> Installation Command. </br>
+pip install requirements.txt
+cd NASA-APOD-Data-Analysis
 Note: Make sure to use virtual enviroments for this project
 
 ## Author
