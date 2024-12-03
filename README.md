@@ -70,7 +70,7 @@ self.API_KEY = os.getenv("API_KEY")
 self.NASA_APOD_URL =os.getenv("NASA_APOD_URL")
 self.JSON_FILE_NAME = "src/static_files/"+os.getenv("JSON_FILE_NAME")
 ```
-Note the names mentioned in the .env file must be matching to when implemented.
+Note the names mentioned in the .env file must be matching to when implemented or used anywhere in the code. Any changes required must be made in the .env file stored locally.
 ## Author
 
 👤 **Suvajit Lodh**
