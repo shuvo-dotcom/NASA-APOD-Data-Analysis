@@ -13,9 +13,9 @@ The project tries to resolve all the 4 problems from the assignment.
 ```
 > Project Installation
 ```
-pip install requirements.txt
-cd NASA-APOD-Data-Analysis
-python src/__init__.py
+(caenv) caenvapple@Mac NASA-APOD-Data-Analysis % pip install requirements.txt
+(caenv) caenvapple@Mac NASA-APOD-Data-Analysis % cd NASA-APOD-Data-Analysis
+(caenv) caenvapple@Mac NASA-APOD-Data-Analysis % python src/__init__.py
 
 Note: Make sure to use virtual enviroments for this project.
 ```
