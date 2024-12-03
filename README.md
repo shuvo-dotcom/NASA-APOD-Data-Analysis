@@ -10,14 +10,7 @@ The project tries to resolve all the 4 problems from the assignment.
 2. After fetching the data from the API -> data needs to be read from the json format and manupulations needs to be done.
 3. Creating Numpy 2d Array based on certain predefined conditions and then appyling filter technique to retrieve the final array.
 4. Analytically Observing the Iris dataset and its results over newly generated features using feature enginering.
-```
-> Project Installation
-```
-(caenv) caenvapple@Mac NASA-APOD-Data-Analysis % pip install requirements.txt
-(caenv) caenvapple@Mac NASA-APOD-Data-Analysis % cd NASA-APOD-Data-Analysis
-(caenv) caenvapple@Mac NASA-APOD-Data-Analysis % python src/__init__.py
 
-Note: Make sure to use virtual enviroments for this project.
 ```
 Create a file named .env and place all the keys required in the file.
 ```
@@ -26,6 +19,16 @@ NASA_APOD_URL=https://api.nasa.gov/planetary/apod
 JSON_FILE_NAME=apod_data.json
 CSV_FILE_NAME=apod_summary.csv
 ```
+
+> Project Installation
+```
+(caenv) caenvapple@Mac NASA-APOD-Data-Analysis % pip install requirements.txt
+(caenv) caenvapple@Mac NASA-APOD-Data-Analysis % cd NASA-APOD-Data-Analysis
+(caenv) caenvapple@Mac NASA-APOD-Data-Analysis % python src/__init__.py
+
+Note: Make sure to use virtual enviroments for this project.
+```
+
 
 ## Author
 
