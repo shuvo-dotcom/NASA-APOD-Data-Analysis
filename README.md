@@ -15,8 +15,10 @@ The project tries to resolve all the 4 problems from the assignment.
 ```
 pip install requirements.txt
 cd NASA-APOD-Data-Analysis
+python src/__init__.py
+
+Note: Make sure to use virtual enviroments for this project.
 ```
-Note: Make sure to use virtual enviroments for this project
 Create a file named .env and place all the keys required in the file.
 ```
 API_KEY=your_key
