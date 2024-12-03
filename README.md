@@ -29,7 +29,48 @@ CSV_FILE_NAME=apod_summary.csv
 Note: Make sure to use virtual enviroments for this project.
 ```
 
+> Project Configurations
+```
 
+from dotenv import load_dotenv
+load_dotenv()
+class problem1:
+    def __init__(self):
+        self.API_KEY = os.getenv("API_KEY")
+        self.NASA_APOD_URL =os.getenv("NASA_APOD_URL")
+        self.JSON_FILE_NAME = "src/static_files/"+os.getenv("JSON_FILE_NAME")
+    def get_apod_data(self, date):
+        response = requests.get(f'{self.NASA_APOD_URL}?api_key={self.API_KEY}&date={date}', auth=('user', 'pass'))
+        formatted_response = (response.json())
+        return {
+            "date": formatted_response['date'] or 'No date',
+            "title": formatted_response['title'] or 'No title',
+            "url": formatted_response['url'] or 'No url',
+            "explanation": formatted_response['explanation'] or 'No explanation',
+            "media_type": formatted_response['media_type'] or 'No media_type'
+        }
+    def fetch_multiple_apod_data(self, start_date, end_date):
+        progressive_date = parser.parse(start_date)
+        end_date = parser.parse(end_date)
+        json_storer = {}
+        for _ in range((end_date-progressive_date).days):
+            json_storer[str(progressive_date.date())] = self.get_apod_data(progressive_date.date())
+            progressive_date += timedelta(days=1)
+            time.sleep(1)
+            print(f"Data 📈 fetch completed for {progressive_date} ✅")
+        with open(self.JSON_FILE_NAME, mode='w', encoding='utf-8') as feedsjson:
+            entry = {str(datetime.now()): json_storer}
+            json.dump(entry,feedsjson)
+        return True
+
+```
+In the above code snipet the below mentioned variables are loaded from .env files.
+```
+self.API_KEY = os.getenv("API_KEY")
+self.NASA_APOD_URL =os.getenv("NASA_APOD_URL")
+self.JSON_FILE_NAME = "src/static_files/"+os.getenv("JSON_FILE_NAME")
+```
+Note the names mentioned in the .env file must be matching to when implemented.
 ## Author
 
 👤 **Suvajit Lodh**
