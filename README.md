@@ -78,6 +78,3 @@ Note the names mentioned in the .env file must be matching to when implemented o
 * Github: [@shuvo-dotcom](https://github.com/shuvo-dotcom)
 * LinkedIn: [@suvajitlodh](https://linkedin.com/in/suvajitlodh)
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
